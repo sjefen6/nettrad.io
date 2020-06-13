@@ -1,0 +1,131 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Narvik Studentradio - &lt;audio&gt; streaming test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<script type="text/javascript">
+function init(){
+  document.getElementById("browserinfo").innerHTML=navigator.userAgent;
+}
+
+window.onload = init;
+</script>
+</head>
+<body>
+<h1>Narvik Studentradio - &lt;audio&gt; streaming test</h1>
+MP3 (Mono 64cbr):<br/>
+<audio src="http://stream.sysrq.no:8000/01-nsr-mobile.mp3" autoplay controls loop>&lt;audio&gt; tag-en er ikke st&oslash;ttet!</audio><br/><br/>
+
+OGG (Mono Q3):<br/>
+<audio src="http://stream.sysrq.no:8000/01-nsr-mobile.ogg" autoplay controls loop>&lt;audio&gt; tag-en er ikke st&oslash;ttet!</audio><br/><br/>
+
+<table border="1">
+  <tr>
+    <th rowspan="2"></th>
+    <th colspan="4">Windows/Linux/OS X</th>
+    <th colspan="3">Windows only</th>
+    <th colspan="1">OS X</th>
+    <th colspan="2">iOS</th>
+    <th colspan="5">Android</th>
+    <th rowspan="2">MeeGo</th>
+    <th rowspan="2">WP OS 7.5</th>
+  </tr>
+  <tr>
+    <th>Chrome</th> <!-- Desktop -->
+    <th>Chromium</th>
+    <th>Firefox</th>
+    <th>Opera</th>
+    <th>Safari (Win x64)</th>  <!-- Windows -->
+    <th>Safari (Win x86)</th>
+    <th>Internett Explorer</th>
+    <th>Safari</th> <!-- OSX -->
+    <th>Safari</th>  <!-- iOS -->
+    <th>Chrome</th>
+    <th>Browser</th> <!-- Android -->
+    <th><a href="https://market.android.com/details?id=com.android.chrome">Chrome Mobile</a></th>
+    <th><a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox">Firefox</a></th>
+    <th><a href="https://market.android.com/details?id=com.opera.mini.android">Opera Mini</a></th>
+    <th><a href="https://market.android.com/details?id=com.opera.browser">Opera Mobile</a></th>
+  </tr>
+  <tr>
+    <th>Version</th>
+    <td>19.0.1084.43 m</td><!--Chrome - Desktop-->
+    <td>33.0.1728.0 build 238493</td><!--Chromium - Desktop-->
+    <td><a href="http://stackoverflow.com/questions/4923136/why-doesnt-firefox-support-mp3-file-format-in-audio" target="_blank">27.0</a></td><!--Firefox - Desktop-->
+    <td>11.52</td><!--Opera - Desktop-->
+    <td>5.1.1</td><!--Safari - Windows-->
+    <td></td><!--Safari - Windows-->
+    <td>9</td><!--IE - Windows-->
+    <td>5.1.1</td><!--Safari - Mac-->
+    <td>iOS 4.2.1</td><!--iOS - Safari -->
+    <td>19.0.1084.60</td><!--iOS - Chrome -->
+    <td>4.0.3</td><!--Browser - Android-->
+    <td>16 "Beta"</td><!--Chrome Mobile - Android-->
+    <td>27.0</td><!--Firefox - Android-->
+    <td>6.5.26571</td><!--Opera Mini - Android-->
+    <td>ADR-1110171336</td><!--Opera Mobile - Android-->
+    <td>Nokia N9</td><!--MeeGo-->
+    <td>IEMobile/9.0</td><!--WP7-->
+  </tr>
+  <tr>
+    <td>MP3</td>
+    <td bgcolor="green">Works</td><!--Chrome - Desktop-->
+    <td bgcolor="red">Does not work</td><!--Chromium - Desktop-->
+    <td bgcolor="green">Works</td><!--Firefox - Desktop-->
+    <td bgcolor="red">Does not work</td><!--Opera - Desktop-->
+    <td bgcolor="red">Does not work</td><!--Safari - Windows-->
+    <td>Not tested</td><!--Safari - Windows-->
+    <td bgcolor="green">Works</td><!--IE - Windows-->
+    <td bgcolor="green">Works</td><!--Safari - Mac-->
+    <td bgcolor="green">Works</td><!--iOS - Safari-->
+    <td bgcolor="green">Works</td><!--iOS - Chrome-->
+    <td bgcolor="red">Does not work</td><!--Browser - Android-->
+    <td bgcolor="green">Works</td><!--Chrome Mobile - Android-->
+    <td bgcolor="green">Works</td><!--Firefox - Android-->
+    <td bgcolor="red">Does not work</td><!--Opera Mini - Android-->
+    <td bgcolor="green">Works</td><!--Opera Mobile - Android-->
+    <td bgcolor="red">Does not work</td><!--MeeGo-->
+    <td bgcolor="green">Works</td><!--WP7-->
+  </tr>
+  <tr>
+    <td>OGG</td>
+    <td bgcolor="green">Works</td><!--Chrome - Windows-->
+    <td bgcolor="green">Works</td><!--Chromium - Windows-->
+    <td bgcolor="green">Works</td><!--Firefox - Windows-->
+    <td bgcolor="green">Works</td><!--Opera - Windows-->
+    <td bgcolor="red">Does not work</td><!--Safari - Windows-->
+    <td>Not tested</td><!--Safari - Windows-->
+    <td bgcolor="red">Does not work</td><!--IE - Windows-->
+    <td bgcolor="red">Does not work</td><!--Safari - Mac-->
+    <td bgcolor="red">Does not work</td><!--iOS - Safari-->
+    <td bgcolor="red">Does not work</td><!--iOS - Chrome-->
+    <td bgcolor="red">Does not work</td><!--Browser - Android-->
+    <td bgcolor="green">Works</td><!--Chrome Mobile - Android-->
+    <td bgcolor="green">Works</td><!--Firefox - Android-->
+    <td bgcolor="red">Does not work</td><!--Opera Mini - Android-->
+    <td bgcolor="red">Does not work</td><!--Opera Mobile - Android-->
+    <td bgcolor="red">Does not work</td><!--MeeGo-->
+    <td bgcolor="red">Does not work</td><!--WP7-->
+  </tr>
+</table><br>
+
+<p>
+<b>Note</b> most of these test was performed before metadata was included in the streams. There have been some issues with metadata change of ogg streams causing playback to end. This bug was present in build 229562 but fixed in
+238493 of chromium. It is unkown when exactly it was fixed, and how the fixes corelates with other chromium derivatives but it seems to be resolved in all modern verions.
+</p>
+
+If you have tested a browser and have new information, please contact me:<br>
+<b>IRC</b><br>
+/msg sjefen6 &lt;OS&gt;, &lt;Browser&gt;, &lt;version&gt;, &lt;mp3 works&gt;, &lt;ogg works&gt;<br>
+on EFnet, Freenode, OFTC<br>
+<b>E-mail</b><br>
+audio-streaming@goldclone.com<br>
+&lt;OS&gt;, &lt;Browser&gt;, &lt;version&gt;, &lt;mp3 works&gt;, &lt;ogg works&gt;<br>
+<b>Twitter</b><br>
+@sjefen6 &lt;OS&gt;, &lt;Browser&gt;, &lt;version&gt;, &lt;mp3 works&gt;, &lt;ogg works&gt;<br><br>
+<b>This might help you identify your browser</b><br>
+<div id="browserinfo" style="width: 320px;"></div>
+
+</body>
+</html>
